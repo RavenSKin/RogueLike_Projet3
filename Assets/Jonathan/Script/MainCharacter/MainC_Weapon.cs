@@ -25,12 +25,14 @@ public class MainC_Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.K) && str_ActuallWeapon != null)
         {
             str_ActuallWeapon = "";
         }
 
         
+
 
     }
 }

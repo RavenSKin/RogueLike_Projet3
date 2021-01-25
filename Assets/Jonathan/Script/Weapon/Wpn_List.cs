@@ -6,6 +6,7 @@ public class Wpn_List : MainC_Weapon
 {
 
 
+
     //Donner les statistiques pour l'arme "SmallSword"
     public int i_SmallSword_Att;
     public int i_SamllSword_AttSpeed;
@@ -31,6 +32,7 @@ public class Wpn_List : MainC_Weapon
     public GameObject gm_DoubleDague;
 
     public void Update() {
+
         
         if(str_ActuallWeapon == "")
         {
