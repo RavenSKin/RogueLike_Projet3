@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class MainC_Moove : MonoBehaviour
 {
-  
+   public GameObject go_sprite;
    public float f_Speed;
    public SpriteRenderer Sr_sprite;
    public Sprite S_Left;
@@ -22,33 +22,29 @@ public class MainC_Moove : MonoBehaviour
       if(Input.GetKey(KeyCode.Q))
       {
         transform.Translate(Vector2.left*f_Speed*Time.deltaTime);
-        
-        Sr_sprite.sprite = S_Up;
         col_mycollider.size = V2_colonhorizontal;
+        go_sprite.transform.rotation = Quaternion.Euler(0,0,-90);
       }
 
       if(Input.GetKey(KeyCode.D))
       {
         transform.Translate(Vector2.right*f_Speed*Time.deltaTime);
-        
-        Sr_sprite.sprite = S_Down;
         col_mycollider.size = V2_colonhorizontal;
+        go_sprite.transform.rotation = Quaternion.Euler(0,0,90);
       }
 
       if(Input.GetKey(KeyCode.Z))
       {
         transform.Translate(Vector2.up*f_Speed*Time.deltaTime);
-      Sr_sprite.sprite = S_Right;
-      
-      col_mycollider.size = V2_colvertical;
+        col_mycollider.size = V2_colvertical;
+        go_sprite.transform.rotation = Quaternion.Euler(0,0,180);
       }
 
       if(Input.GetKey(KeyCode.S))
       {
         transform.Translate(Vector2.down*f_Speed*Time.deltaTime);
-      Sr_sprite.sprite = S_Left;
-      
-      col_mycollider.size = V2_colvertical;
+        col_mycollider.size = V2_colvertical;
+        go_sprite.transform.rotation = Quaternion.Euler(0,0,0);
       }
     }
 }
