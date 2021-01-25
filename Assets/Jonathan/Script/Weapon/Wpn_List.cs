@@ -8,7 +8,7 @@ public class Wpn_List : MainC_Weapon
     public string SmallSword;
     public int i_Stats_Attaque;
     public int i_Stats_AttaqueSpeed;
-
+    public string MyWeapon;
     public void Start() {
         SmallSword ="Epee courte";
         
