@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Doors_Right
+  - Bullet
+  - Doors_Left
+  - Coin
+  - Weapon
   layers:
   - Default
   - TransparentFX
