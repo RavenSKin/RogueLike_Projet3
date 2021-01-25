@@ -84,7 +84,7 @@ public class Wpn_List : MainC_Weapon
             Debug.Log(col.gameObject.name);
             i_ActualAtt =  i_HeavySword_Att;
             i_ActualAttSpeed = i_HeavySword_AttSpeed;
-             gm_DoubleDague.SetActive(false);
+            gm_DoubleDague.SetActive(false);
             gm_Dague.SetActive(false);
             gm_HeavySword.SetActive(true);
             gm_Sword.SetActive(false);
@@ -97,7 +97,7 @@ public class Wpn_List : MainC_Weapon
             Debug.Log(col.gameObject.name);
             i_ActualAtt = i_SmallSword_Att;
             i_ActualAttSpeed =i_SamllSword_AttSpeed;
-             gm_DoubleDague.SetActive(false);
+            gm_DoubleDague.SetActive(false);
             gm_Dague.SetActive(false);
             gm_HeavySword.SetActive(false);
             gm_Sword.SetActive(false);
@@ -105,6 +105,17 @@ public class Wpn_List : MainC_Weapon
             str_ActuallWeapon = "BrokenSword";
         }
 
+        if(col.gameObject.name == "BrokenSword" && str_ActuallWeapon == "")
+        {
+            Debug.Log(col.gameObject.name);
+            i_ActualAtt = i_SmallSword_Att;
+            i_ActualAttSpeed =i_SamllSword_AttSpeed;
+            gm_DoubleDague.SetActive(false);
+            gm_Dague.SetActive(false);
+            gm_HeavySword.SetActive(false);
+            gm_Sword.SetActive(false);
+            gm_BrokenSword.SetActive(true);
+            str_ActuallWeapon = "BrokenSword";   
+        }
     }
-
 }
