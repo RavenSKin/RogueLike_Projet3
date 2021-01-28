@@ -5,16 +5,32 @@ using UnityEngine;
 public class MainC_Weapon : MonoBehaviour
 {
     public string str_ActuallWeapon = "";
-    public Transform WeaponPlace;
     public int i_ActualAtt;
     public int i_ActualAttSpeed;
-
-
-
     public bool b_CanAttaque;
-     //Définir quel est le genre d'attaque
-     public bool b_CaC;
-    public bool b_Dist;
+
+
+
+
+     public int i_BreakSword_Att;
+    public int i_BreakSword_AttSpeed;
+
+     //Donner les statistiques pour l'arme "Sword"
+    protected int i_Sword_Att;
+    protected int i_Sword_AttSpeed;
+
+     //Donner les statistiques pour l'arme "HeavySword"
+    protected int i_HeavySword_Att;
+    protected int i_HeavySword_AttSpeed;
+
+     //Donner les statistiques pour l'arme "Dague"
+    protected int i_Dague_Att;
+    protected int i_Dague_AttSpeed;
+
+    protected int i_doubleDague_Att;
+    protected int i_doubleDague_AttSpeed;
+
+     public SwitchWeapon scp_switchweapon;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +41,39 @@ public class MainC_Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(Input.GetKeyDown(KeyCode.K) && str_ActuallWeapon != null)
+        
+    }
+    protected void ChangeATT()
+    {
+        if(scp_switchweapon.i_Item.name == "BreakSword")
         {
-            str_ActuallWeapon = "";
+            i_ActualAtt = i_BreakSword_Att;
+            i_ActualAttSpeed = i_BreakSword_AttSpeed ;
         }
 
-        
+        if(scp_switchweapon.i_Item.name == "Sword")
+        {
+            i_Sword_Att = i_ActualAtt;
+            i_Sword_AttSpeed = i_ActualAttSpeed;  
+        }
 
+        if(scp_switchweapon.i_Item.name == "HeavySword")
+        {
+            i_HeavySword_Att = i_ActualAtt;
+            i_HeavySword_AttSpeed = i_ActualAttSpeed;
+        }
+
+        if(scp_switchweapon.i_Item.name == "Dague")
+        {
+            i_Sword_Att = i_ActualAtt;
+            i_Sword_AttSpeed = i_ActualAttSpeed; 
+        }
+
+        if(scp_switchweapon.i_Item.name == "DoubleDague")
+        {
+            i_doubleDague_Att = i_ActualAtt;
+            i_doubleDague_AttSpeed = i_ActualAttSpeed;
+        }
 
     }
 }
