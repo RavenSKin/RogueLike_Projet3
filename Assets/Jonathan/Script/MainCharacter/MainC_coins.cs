@@ -27,9 +27,6 @@ public class MainC_coins : MonoBehaviour
             //Detruit l'objet
             Destroy(col.gameObject);
 
-            //private void (faut que ça marche){
-            //    if marche pas then marche stp
-            //}
         }
    }
 }
