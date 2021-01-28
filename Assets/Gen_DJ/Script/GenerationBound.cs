@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class GenerationBound : MonoBehaviour
 {
-
+    GameObject container;
     GameObject[] LeftRay;
     GameObject[] RightRay;
     GameObject[] NorthRay;
     GameObject[] SouthRay;
+    public RoomManager _rmActive;
     protected bool IsGenFinished;
-    
-     float WaitToGetRooms;
-     float WaitToFindBossRoom;
+    float WaitToGetInfo;
+    public bool IsGenGood;
+     public float WaitToGetRooms;
+    public float WaitToFindBossRoom;
      string numberOfRooms;
      bool TimerEnded;
      bool SecTimerEnded;
@@ -29,11 +31,11 @@ public class GenerationBound : MonoBehaviour
 
     [SerializeField] private GameObject StartRoom;
     [SerializeField] private Vector3 StartPosition;
-    [SerializeField] private List<GameObject> RoomList = new List<GameObject>();
+    public List<GameObject> RoomList = new List<GameObject>();
     [Space]
     [Header("Room Info")]
     [Space]
-    GameObject BossRoom;
+    public GameObject BossRoom;
 
     int IsListEnded;
     [SerializeField] private int Numb_Of_Room;
@@ -54,14 +56,15 @@ public class GenerationBound : MonoBehaviour
     void Update()
     {
        
-        
+       //if(container.activeInHierarchy)
        Rooms = GameObject.FindGameObjectsWithTag("Room");
       
         GetTheListOfRoom();
         SetUpTheBossRoom();
         BossRoom = RoomList[RoomList.Count - 1];
         Numb_Of_Room = Rooms.Length;
-
+       
+       
     }
     public void GetTheListOfRoom()
     {
@@ -72,7 +75,7 @@ public class GenerationBound : MonoBehaviour
         if (WaitToGetRooms >= 2)
         {
             TimerEnded = true;      // arrete le timer 
-            Debug.Log(Rooms.Length);
+
             if (!StopTheList)   //StopTheList est en false de base
             {
                 RoomList.AddRange(Rooms);
@@ -99,7 +102,10 @@ public class GenerationBound : MonoBehaviour
             WaitToFindBossRoom += Time.deltaTime;
         }
         if (WaitToFindBossRoom >= 2)   
+        { if ( Numb_Of_Room >= MinRoom && Numb_Of_Room <= MaxRoom)
         {
+            _rmActive.enabled=true;
+        } 
             // RESET TOUT SI LE NOMBRE DE SALLE N'EST PAS COMPRIS ENTRE MinRoom et MaxRoom
             if (Numb_Of_Room < MinRoom) 
             { SecTimerEnded = true;
@@ -112,6 +118,7 @@ public class GenerationBound : MonoBehaviour
                     ResetBooleans();
 
                 }
+                 
                 Debug.LogWarning("Generation fausse");
 
             }
@@ -131,7 +138,7 @@ public class GenerationBound : MonoBehaviour
             
                   // STOP LE TIMER SI TIMER 2 = 2 
               WaitToFindBossRoom = 0;   // RESET LE TIMER 2
-            Debug.Log(Rooms.Length);
+            
 
 
         

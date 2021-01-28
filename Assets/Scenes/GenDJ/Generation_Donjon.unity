@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &531623546
+--- !u!1001 &44718936
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -233,11 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1962790105245862787, guid: ed406121c0ce03d428d2d4c2503cbb2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1962790105245862787, guid: ed406121c0ce03d428d2d4c2503cbb2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3823112290889347364, guid: ed406121c0ce03d428d2d4c2503cbb2a, type: 3}
       propertyPath: m_Name
@@ -272,6 +272,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1819243513806000306, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2015312238949445584, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -330,12 +334,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4540698064571771874, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
       propertyPath: MinRoom
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4540698064571771874, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
       propertyPath: MaxRoom
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4540698064571771874, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
+      propertyPath: _rmActive
+      value: 
+      objectReference: {fileID: 1747957134}
     - target: {fileID: 8710139071995434386, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
       propertyPath: m_Name
       value: DungeonMaster
@@ -461,6 +469,17 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1747957134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1819243513806000306, guid: cde7727a845984f4d88ebe7c9f85b670, type: 3}
+  m_PrefabInstance: {fileID: 946086605}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957c2be1e740d874fbf83d8e9f2fcdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1768578292
 GameObject:
   m_ObjectHideFlags: 0

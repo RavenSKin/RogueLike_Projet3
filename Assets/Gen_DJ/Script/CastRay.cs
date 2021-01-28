@@ -11,11 +11,12 @@ public class CastRay : MonoBehaviour
    protected int SelectLeftRoom;
 
     protected  int BinaryInteger;
-  protected  float Range = 10;
+  protected  float Offset = 20;
+    protected float Range; 
     protected bool canBuild;
     protected bool IsCasting = true;
     protected bool StartBuilding;
-
+    Vector3 DebugVector;
 
    
     //              DELAY SECTION
@@ -31,30 +32,40 @@ public class CastRay : MonoBehaviour
     {
         if (gameObject.tag == "Top")
         {
+            DebugVector = new Vector3(transform.position.x, transform.position.y + Range+8 , transform.position.z);
             CastToTop();
+            Debug.DrawLine(transform.position, DebugVector, Color.red);
             ComputeTime();
         }
         if (gameObject.tag == "Bot")
         {
+            DebugVector = new Vector3(transform.position.x, transform.position.y -( Range+8), transform.position.z);
             CastToBot();
+            Debug.DrawLine(transform.position, DebugVector, Color.red);
             ComputeTime();
         }
         if (gameObject.tag == "Left")
         {
+            DebugVector = new Vector3(transform.position.x -( Range +8), transform.position.y, transform.position.z);
             CastToLeft();
+            Debug.DrawLine(transform.position,DebugVector , Color.red);
+           
             ComputeTime();
         }
         if (gameObject.tag == "Right")
         {
+            DebugVector = new Vector3(transform.position.x + Range+8 , transform.position.y , transform.position.z);
             CastToRight();
+            
+            Debug.DrawLine(transform.position, DebugVector, Color.red);
             ComputeTime();
         }
     }
 
    protected void CastToBot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Range + 4);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Range +8);
+        
 
         if (hit.collider != null && hit.collider.tag != "Wall" && hit.collider.tag != "Door")
         {
@@ -84,8 +95,8 @@ public class CastRay : MonoBehaviour
    protected void CastToTop()
     {
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, Range + 4);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, Range +8);
+       
         if (hit.collider != null && hit.collider.tag != "Wall" && hit.collider.tag != "Door")
         {
           
@@ -113,8 +124,8 @@ public class CastRay : MonoBehaviour
     }
    protected void CastToRight()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Range + 4);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, Range+8 );
+       
         if (hit.collider != null && hit.collider.tag != "Wall" && hit.collider.tag != "Door")
         {
            
@@ -141,8 +152,8 @@ public class CastRay : MonoBehaviour
     }
    protected void CastToLeft()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right, Range + 4);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right, Range +8);
+        
         //Debug.DrawLine(transform.position, new Vector2(transform.position.x - (Range + 4), transform.position.y));
         if (hit.collider != null && hit.collider.tag == "Door")
         {
