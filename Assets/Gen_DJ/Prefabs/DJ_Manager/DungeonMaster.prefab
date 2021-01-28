@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015312238949445584}
   - component: {fileID: 4540698064571771874}
+  - component: {fileID: 1819243513806000306}
   m_Layer: 0
   m_Name: DungeonMaster
   m_TagString: Untagged
@@ -43,6 +44,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b4fd1e25348940429ab19c5c59264d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N_Rooms: []
-  CurrentNumberOfRoom: 0
+  WaitToGetRooms: 0
+  WaitToFindBossRoom: 0
+  StartRoom: {fileID: 0}
+  StartPosition: {x: 0, y: 0, z: 0}
+  RoomList: []
   Numb_Of_Room: 0
+  MinRoom: 0
+  MaxRoom: 0
+--- !u!114 &1819243513806000306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710139071995434386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957c2be1e740d874fbf83d8e9f2fcdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomSelected: {fileID: 0}
+  GenBound: {fileID: 8710139071995434386}
+  PotionRoom: 5
+  ChallengeRoom: 2
+  WeaponRoom: 3
+  Room_Setup: []
+  RoomEnabler:
+  - Potion
+  - Weapon
+  - Challenge
