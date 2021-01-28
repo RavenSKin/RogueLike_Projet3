@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class SpawnEnnemi : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public List<GameObject> EnemyEnabler = new List<GameObject>();
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         
     }
