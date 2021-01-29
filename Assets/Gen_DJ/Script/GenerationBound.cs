@@ -12,6 +12,7 @@ public class GenerationBound : MonoBehaviour
     GameObject[] NorthRay;
     GameObject[] SouthRay;
     public RoomManager _rmActive;
+    public DisableDoor _disableDoor;
     protected bool IsGenFinished;
     float WaitToGetInfo;
     public bool IsGenGood;
@@ -104,6 +105,8 @@ public class GenerationBound : MonoBehaviour
         if (WaitToFindBossRoom >= 2)   
         { if ( Numb_Of_Room >= MinRoom && Numb_Of_Room <= MaxRoom)
         {
+                IsGenGood = true;
+                _disableDoor.enabled = true;
             _rmActive.enabled=true;
         } 
             // RESET TOUT SI LE NOMBRE DE SALLE N'EST PAS COMPRIS ENTRE MinRoom et MaxRoom

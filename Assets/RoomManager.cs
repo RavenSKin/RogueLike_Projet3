@@ -28,8 +28,7 @@ public class RoomManager : MonoBehaviour
         Debug.Log(RoomEnabler[1]);
         BossRoomInList = Room_Setup.Count;
         Room_Setup = gameObject.GetComponent<GenerationBound>().RoomList;
-        Room_Setup.Remove(Room_Setup[0]);
-        Room_Setup.Remove(Room_Setup[BossRoomInList]);
+        Room_Setup.Remove(Room_Setup[0]);        Room_Setup.Remove(Room_Setup[BossRoomInList]);
     }
 
     // Update is called once per frame
