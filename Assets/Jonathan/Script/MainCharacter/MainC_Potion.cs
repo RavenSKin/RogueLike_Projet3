@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class MainC_coins : MonoBehaviour
+
+public class MainC_Potion : MonoBehaviour
 {
-    
-    public Text CoinNumber;
-    public int Coin;
+    public Text PotionNumber;
+    public int Potion;
 
     public void Update() {
-        //Coin Gestion
-        CoinNumber.text = ""+Coin;
+        //Potion Gestion
+        PotionNumber.text = ""+Potion;
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-      
-       if(col.gameObject)
+        
+        if(col.gameObject)
         {
             Debug.Log(col.gameObject.name);
         }
 
-        if(col.gameObject.tag =="Coin")
+        if(col.gameObject.tag == "Potion")
         {
             //Ajoute +1 à l'UI
-            Coin += 1;
+            Potion += 1;
             //Detruit l'objet
             Destroy(col.gameObject);
 
         }
-  }
+    }
+       
+      
+   
 }

@@ -12,12 +12,23 @@ public class MainC_Moove : MonoBehaviour
    public Sprite S_Up;
    public Sprite S_Down;
 
+
+
    public BoxCollider2D col_mycollider;
+
+   public Transform trsm_MyCollider;
+
+
+
+
+
 
    public Vector2 V2_colvertical;
    public Vector2 V2_colonhorizontal;
 
     void Update() {
+
+
 
       if(Input.GetKey(KeyCode.Q))
       {

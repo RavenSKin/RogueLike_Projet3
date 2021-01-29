@@ -27,21 +27,11 @@ public class MainC_Brain : MonoBehaviour
     [Header("Die")]
     public bool Died =false;
 
-
-    [Space]
-    [Header("Stamina")]
-    public float f_StaminaMax;
-    public Image Img_Stamina;
-    public float f_CostStamina;
-    public bool b_protect;
-
-
-
-
     [Space]
     [Header("Sprite")]
     public SpriteRenderer my_sprite;
     
+    //Applique des dégats.
     public void Damage()
     {
         if(Life_Total <= 60 && Life_Total >= 49)
@@ -73,16 +63,5 @@ public class MainC_Brain : MonoBehaviour
        // Debug.Log(Life_Total);
     }
 
-    public void Stamina()
-    {
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            Debug.Log("Protection Actif");
-            
-            b_protect=true;
-            Img_Stamina.fillAmount -= Time.deltaTime;
-
-
-        }
-    }
+    
 }

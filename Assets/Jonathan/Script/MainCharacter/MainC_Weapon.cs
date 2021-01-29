@@ -24,8 +24,8 @@ public class MainC_Weapon : MonoBehaviour
     protected int i_HeavySword_AttSpeed;
 
      //Donner les statistiques pour l'arme "Dague"
-    protected int i_Dague_Att;
-    protected int i_Dague_AttSpeed;
+    public int i_Dague_Att;
+    public int i_Dague_AttSpeed;
 
     protected int i_doubleDague_Att;
     protected int i_doubleDague_AttSpeed;
@@ -65,8 +65,8 @@ public class MainC_Weapon : MonoBehaviour
 
         if(scp_switchweapon.i_Item.name == "Dague")
         {
-            i_Sword_Att = i_ActualAtt;
-            i_Sword_AttSpeed = i_ActualAttSpeed; 
+            i_ActualAtt = i_Dague_Att ;
+            i_ActualAttSpeed =  i_Dague_AttSpeed ; 
         }
 
         if(scp_switchweapon.i_Item.name == "DoubleDague")
