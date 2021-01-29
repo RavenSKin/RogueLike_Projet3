@@ -26,24 +26,10 @@ public class MainC_Life : MainC_Brain
 
   public void OnTriggerEnter2D(Collider2D col) {
        
-      if(col.gameObject)
-        {
-           // Debug.Log(col.gameObject.tag);
-        }
-
-        if(col.gameObject.CompareTag("Bullet") && TakeDamage && !b_protect)
-        {
-            //Changement de l'HUD
-            Damage();
-
-            //Detruit l'objets SI c'est une flèche
-            //  Destroy(col.gameObject);
-        }
-        if(col.gameObject.CompareTag("Enemy") && b_protect)
-        {
-          //FeedBack et knockBack L'assaillant.
-          //Donner un vector2 face au joueur
-        }
+     if(col.gameObject.tag =="Bullet")
+     {
+       Damage();
+     }
    }
    
    void invicibility(){

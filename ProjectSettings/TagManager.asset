@@ -9,6 +9,15 @@ TagManager:
   - Doors_Left
   - Coin
   - Weapon
+  - Room
+  - Wall
+  - Door
+  - Left
+  - Bot
+  - Top
+  - Right
+  - P_Room
+  - Potion
   layers:
   - Default
   - TransparentFX
