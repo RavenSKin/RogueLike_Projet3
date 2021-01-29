@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BuildWall : CastRay
 {
+    public GameObject GenBound;
+    public bool _StopCast;
     GameObject _Parent;
     public GameObject RoomMaster;
     [Space]
@@ -24,7 +26,9 @@ public class BuildWall : CastRay
    // public List<GameObject> RoomStorage = new List<GameObject>();
     private void Start()
     {
+        
         Range = Offset * 2;
+        GenBound = GameObject.Find("DungeonMaster");
         _Parent = GameObject.FindGameObjectWithTag("P_Room");
         SelectSouthRoom = Random.Range(0, SouthRoom.Count);
         SelectNorthRoom = Random.Range(0, NorthRoom.Count);
@@ -34,10 +38,14 @@ public class BuildWall : CastRay
     }
     private void Update()
     {
+        _StopCast = GenBound.GetComponent<GenerationBound>().IsGenGood;
         Cast();
-        if (StartBuilding)
+        if (!_StopCast)
         {
-            Build_DJ();
+            if (StartBuilding)
+            {
+                Build_DJ();
+            }
         }
     }
     protected void Build_DJ()
