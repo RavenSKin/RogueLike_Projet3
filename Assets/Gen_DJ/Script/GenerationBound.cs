@@ -6,6 +6,18 @@ using UnityEngine.UI;
 
 public class GenerationBound : MonoBehaviour
 {
+    [Header("UI")]
+    [Space]
+    public Canvas Player_UI;
+    public Image BlackScreen;
+    public Color _fadeColor;
+    int Nb_text;
+    public GameObject UI_Text_1;
+    public GameObject UI_Text_2;
+    public GameObject UI_Text_3;
+    [Space]
+    [Header("Room")]
+    [Space]
     GameObject container;
     GameObject[] LeftRay;
     GameObject[] RightRay;
@@ -46,11 +58,12 @@ public class GenerationBound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        Player_UI.enabled = false;
+        UI_Text_1.SetActive(true);
  _Parent = GameObject.FindGameObjectWithTag("P_Room");
         RoomList[0] = StartRoom;
         Rooms[0] = StartRoom;
-
+        
     }
 
     // Update is called once per frame
@@ -108,6 +121,7 @@ public class GenerationBound : MonoBehaviour
                 IsGenGood = true;
                 _disableDoor.enabled = true;
             _rmActive.enabled=true;
+                UI_Text_3.SetActive(true);
         } 
             // RESET TOUT SI LE NOMBRE DE SALLE N'EST PAS COMPRIS ENTRE MinRoom et MaxRoom
             if (Numb_Of_Room < MinRoom) 
@@ -154,6 +168,7 @@ public class GenerationBound : MonoBehaviour
 
             _Parent.SetActive(false);
             RoomList.Clear();
+            UI_Text_2.SetActive(true);
 
         }
         void CreateRoom()
@@ -212,5 +227,10 @@ public class GenerationBound : MonoBehaviour
         {
             S_Ray.SetActive(false);
         }
+    }
+    IEnumerator StartGame()
+    {
+        
+        yield return new WaitForSeconds(1f);
     }
 }
