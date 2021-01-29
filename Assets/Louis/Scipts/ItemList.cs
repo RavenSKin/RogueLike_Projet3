@@ -8,14 +8,12 @@ public class ItemList : MonoBehaviour
     public GameObject Character;
 
     public int _price;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        Character = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         PieceDuJoueur = Character.GetComponent<MainC_coins>().Coin;
@@ -24,7 +22,7 @@ public class ItemList : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(PieceDuJoueur > _price)
+        if(PieceDuJoueur >= _price)
         {
             PieceDuJoueur = PieceDuJoueur - _price;
             gameObject.SetActive(false);
