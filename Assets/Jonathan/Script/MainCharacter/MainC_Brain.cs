@@ -27,9 +27,7 @@ public class MainC_Brain : MonoBehaviour
     [Header("Die")]
     public bool Died =false;
 
-    [Space]
-    [Header("Sprite")]
-    public SpriteRenderer my_sprite;
+    
     
     //Applique des dégats.
     public void Damage()

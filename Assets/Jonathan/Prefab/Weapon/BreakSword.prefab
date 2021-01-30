@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 4860147516227668448}
   - component: {fileID: 4860147516227668449}
   - component: {fileID: 4860147516227668450}
-  - component: {fileID: 4860147516227668451}
   m_Layer: 0
   m_Name: BreakSword
   m_TagString: Weapon
@@ -163,19 +162,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4860147516227668451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4860147516227668455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c860937010d4a9543b68fb1218beef1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_MainC: {fileID: 0}
-  v3_charcterRotation: {x: 0, y: 0, z: 0}
-  b_MakeRotation: 0
-  sc_switchWeapon: {fileID: 0}

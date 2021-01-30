@@ -51,17 +51,9 @@ public class MainC_Weapon : MonoBehaviour
             i_ActualAttSpeed = i_BreakSword_AttSpeed ;
         }
 
-        if(scp_switchweapon.i_Item.name == "Sword")
-        {
-            i_Sword_Att = i_ActualAtt;
-            i_Sword_AttSpeed = i_ActualAttSpeed;  
-        }
+       
 
-        if(scp_switchweapon.i_Item.name == "HeavySword")
-        {
-            i_HeavySword_Att = i_ActualAtt;
-            i_HeavySword_AttSpeed = i_ActualAttSpeed;
-        }
+       
 
         if(scp_switchweapon.i_Item.name == "Dague")
         {
@@ -69,11 +61,7 @@ public class MainC_Weapon : MonoBehaviour
             i_ActualAttSpeed =  i_Dague_AttSpeed ; 
         }
 
-        if(scp_switchweapon.i_Item.name == "DoubleDague")
-        {
-            i_doubleDague_Att = i_ActualAtt;
-            i_doubleDague_AttSpeed = i_ActualAttSpeed;
-        }
+       
 
     }
 }

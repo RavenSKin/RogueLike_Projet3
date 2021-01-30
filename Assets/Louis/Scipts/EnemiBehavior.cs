@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemiBehavior : MonoBehaviour
 {
     public Transform player;
-
+    public GameObject Enemy;
     public GameObject Col_Sword;
 
     public float speed;
@@ -34,7 +34,7 @@ public class EnemiBehavior : MonoBehaviour
         var angle = Mathf.Atan2(-relativePos.y, -relativePos.x) * Mathf.Rad2Deg;
         var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = rotation;
-        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        Enemy.transform.position = Vector2.MoveTowards(Enemy.transform.position, player.position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, player.position) < stoppingDistance)
         {

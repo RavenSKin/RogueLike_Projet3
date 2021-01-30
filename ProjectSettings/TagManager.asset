@@ -18,6 +18,8 @@ TagManager:
   - Right
   - P_Room
   - Potion
+  - Damage
+  - Enemy
   layers:
   - Default
   - TransparentFX

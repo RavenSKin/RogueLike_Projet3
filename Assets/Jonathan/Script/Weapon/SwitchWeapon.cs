@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SwitchWeapon : MonoBehaviour
 {
+    public Animator _anim;
+    public GameObject Sword_Collider;
+    public GameObject Daguer_Collider;
     public GameObject LastChild;
     GameObject go_thischild;
    Transform _Parent;
@@ -25,35 +28,45 @@ public class SwitchWeapon : MonoBehaviour
 
     GameObject go_actualWeapon;
 
-
+    private void Start()
+    {
+        i_Item = null;
+    }
     private void Update()
     {
-        _Parent = go_actualWeapon.transform.parent;
-        if(_Parent == null)
+        if (b_IsWeaponActive)
         {
-            go_actualWeapon.SetActive(true);
+            go_actualWeapon.SetActive(false);
         }
-        if (BeginTimer)
-        {
-           W_Time();
-        }
+
+
         if (b_IsWeaponActive&&Input.GetKey(KeyCode.W))
         {
             b_IsWeaponActive = false;
-            BeginTimer = true;
+            //BeginTimer = true;
             Dropi_Item();
+            _anim.SetBool("Sword", false);
+            _anim.SetBool("Daguer", false);
         }
-        if (b_IsWeaponActive)
-        {
-            i_Item.GetComponent<Collider2D>().enabled = false;
-        }
+     
 
 
          if(Input.GetKey(KeyCode.Mouse0))
         {
-            go_thischild = go_PlaceOrder.transform.GetChild(0).gameObject;
-            go_thischild.SetActive(true);
-            StartCoroutine(DelayAttack());
+          
+            if(i_Item.name == "BreakSword"&&b_IsWeaponActive)
+            {
+               
+                _anim.SetBool("Sword", true);
+                _anim.SetBool("Daguer", false);
+            }
+            if (i_Item.name == "Dague" && b_IsWeaponActive)
+            {
+               
+                _anim.SetBool("Sword", false);
+                _anim.SetBool("Daguer", true);
+            }
+        
         }
 
 
@@ -65,9 +78,9 @@ public class SwitchWeapon : MonoBehaviour
     {
         LastChild = go_actualWeapon;
         Trsm_PlaceHolder.transform.DetachChildren();
-
-        go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=false;
-        go_actualWeapon.SetActive(true);
+        LastChild.transform.position = Trsm_PlaceHolder.transform.position;
+        LastChild.SetActive(true);
+        StartCoroutine(WaitToTake());
 
     }
 
@@ -76,41 +89,26 @@ public class SwitchWeapon : MonoBehaviour
 
         if (!b_IsWeaponActive && collision.gameObject.tag == "Weapon")
         {
-            i_Item = collision.gameObject;
-            collision.gameObject.transform.position = Trsm_PlaceHolder.transform.position;
-            collision.gameObject.transform.SetParent(Trsm_PlaceHolder);
             b_IsWeaponActive = true;
-
+            i_Item = collision.gameObject;
             go_actualWeapon = collision.gameObject;
-            go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=true;
-
-
             collision.gameObject.SetActive(false);
+
+            
         }
         
     }
-
-     IEnumerator DelayAttack(){
-        yield return new WaitForSeconds(1f);
-        go_thischild.SetActive(false);
-    }
-    
-
-    void W_Time()
+    IEnumerator WaitToTake()
     {
-     i_Item.GetComponent<Collider2D>().enabled = false;
-
-        timer += Time.deltaTime;
-        if (timer >= 0.5f)
-        {
-            i_Item.GetComponent<Collider2D>().enabled = true;
-            timer = 0;
-            BeginTimer = false;
-        }
-
-       
+        i_Item.GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(1f);
+        i_Item.GetComponent<Collider2D>().enabled = true;
     }
-   
+  
+
+
 }
+   
+
 
 

@@ -1,5 +1,158 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2837930334751196078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2400950882196002539}
+  - component: {fileID: 9040734315180520454}
+  - component: {fileID: 2007391031601930591}
+  - component: {fileID: 4025334468178520678}
+  - component: {fileID: 7173019235600535818}
+  - component: {fileID: 4642253892047184544}
+  - component: {fileID: 1073842495951029528}
+  m_Layer: 0
+  m_Name: BreakSword
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2400950882196002539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.07999992, y: -1.800003, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7059689346033878900}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &9040734315180520454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09238982, y: 0.015398979}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1, y: 1.7}
+  m_EdgeRadius: 0
+--- !u!50 &2007391031601930591
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 2
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &4025334468178520678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d5c0a0f1f94974ab89cd41a5e3b185, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 0}
+  Sword_Collider: {fileID: 0}
+  Daguer_Collider: {fileID: 0}
+  LastChild: {fileID: 0}
+  go_PlaceOrder: {fileID: 0}
+  Trsm_PlaceHolder: {fileID: 0}
+  i_Item: {fileID: 0}
+  b_IsWeaponActive: 0
+--- !u!114 &7173019235600535818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670ed076d6b0eca4187cacbb90728627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinNumber: {fileID: 0}
+  Coin: 0
+--- !u!114 &4642253892047184544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215a979666f688840a3831ce8644cb6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PotionNumber: {fileID: 0}
+  Potion: 0
+--- !u!114 &1073842495951029528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837930334751196078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ddf575999058b4aacf6b04be9fab84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TakeDamage: 1
+  f_TimeInvicibility: 0
+  f_TimeInvicibilityMAX: 0
+  Col_mycollider: {fileID: 0}
+  Heart1: {fileID: 0}
+  Heart2: {fileID: 0}
+  Heart3: {fileID: 0}
+  Life_Total: 60
+  Died: 0
+  my_sprite: {fileID: 0}
 --- !u!1 &3294446443696705315
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,8 +374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc4f446ade116f45893bc31d64977d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  go_thischild: {fileID: 0}
-  go_PlaceOrder: {fileID: 7059689345671207147}
 --- !u!1 &7059689345034749239
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,11 +502,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d5c0a0f1f94974ab89cd41a5e3b185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  i_Item: {fileID: 0}
-  Trsm_PlaceHolder: {fileID: 7059689345671207148}
-  b_IsWeaponActive: 0
-  go_thischild: {fileID: 0}
+  _anim: {fileID: 0}
+  Sword_Collider: {fileID: 0}
+  Daguer_Collider: {fileID: 0}
+  LastChild: {fileID: 0}
   go_PlaceOrder: {fileID: 0}
+  Trsm_PlaceHolder: {fileID: 7059689345671207148}
+  i_Item: {fileID: 0}
+  b_IsWeaponActive: 0
 --- !u!114 &8179051824396862544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7059689345034749224}
+  - {fileID: 2400950882196002539}
   m_Father: {fileID: 7059689345409732761}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
