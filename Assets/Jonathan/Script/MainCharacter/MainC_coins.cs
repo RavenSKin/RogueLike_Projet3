@@ -17,7 +17,7 @@ public class MainC_coins : MonoBehaviour
       
        if(col.gameObject)
         {
-            Debug.Log(col.gameObject.name);
+
         }
 
         if(col.gameObject.tag =="Coin")

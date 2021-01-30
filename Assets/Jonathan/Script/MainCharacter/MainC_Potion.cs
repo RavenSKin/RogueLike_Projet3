@@ -17,7 +17,7 @@ public class MainC_Potion : MonoBehaviour
         
         if(col.gameObject)
         {
-            Debug.Log(col.gameObject.name);
+
         }
 
         if(col.gameObject.tag == "Potion")
