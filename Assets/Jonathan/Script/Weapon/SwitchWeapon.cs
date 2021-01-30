@@ -25,6 +25,7 @@ public class SwitchWeapon : MonoBehaviour
 
     GameObject go_actualWeapon;
 
+
     private void Update()
     {
         _Parent = go_actualWeapon.transform.parent;
@@ -64,8 +65,10 @@ public class SwitchWeapon : MonoBehaviour
     {
         LastChild = go_actualWeapon;
         Trsm_PlaceHolder.transform.DetachChildren();
+
         go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=false;
         go_actualWeapon.SetActive(true);
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -80,6 +83,7 @@ public class SwitchWeapon : MonoBehaviour
 
             go_actualWeapon = collision.gameObject;
             go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=true;
+
 
             collision.gameObject.SetActive(false);
         }

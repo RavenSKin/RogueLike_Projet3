@@ -5,15 +5,14 @@ using UnityEngine;
 public class Wpn_Touch : MonoBehaviour
 {
 
-    
-    
-
+  
 
  
 
     // Update is called once per frame
     void Update()
     {
+
 
         
 
