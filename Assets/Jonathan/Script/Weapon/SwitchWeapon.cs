@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class SwitchWeapon : MonoBehaviour
 {
-    public GameObject i_Item;
+    public GameObject LastChild;
+    GameObject go_thischild;
+   Transform _Parent;
+    public GameObject go_PlaceOrder;
     public Transform Trsm_PlaceHolder;
-    public bool b_IsWeaponActive;
+    [Space]
+    [Space]
+    [Header("Ne pas remplir")]
+    [Space]
+  
+    public GameObject i_Item;
+    public  bool b_IsWeaponActive;
     bool BeginTimer;
     int colNumber;
     float timer;
 
-    public GameObject go_thischild;
-    public GameObject go_PlaceOrder;
+  
+    
 
-    GameObject go_atcualWeapon;
+    GameObject go_actualWeapon;
 
     private void Update()
     {
+        _Parent = go_actualWeapon.transform.parent;
+        if(_Parent == null)
+        {
+            go_actualWeapon.SetActive(true);
+        }
         if (BeginTimer)
         {
            W_Time();
@@ -48,9 +62,10 @@ public class SwitchWeapon : MonoBehaviour
 
     void Dropi_Item()
     {
+        LastChild = go_actualWeapon;
         Trsm_PlaceHolder.transform.DetachChildren();
-        go_atcualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=false;
-        //SetActive(true);
+        go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=false;
+        go_actualWeapon.SetActive(true);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -63,8 +78,8 @@ public class SwitchWeapon : MonoBehaviour
             collision.gameObject.transform.SetParent(Trsm_PlaceHolder);
             b_IsWeaponActive = true;
 
-            go_atcualWeapon = collision.gameObject;
-            go_atcualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=true;
+            go_actualWeapon = collision.gameObject;
+            go_actualWeapon.GetComponent<Wpn_Orientation>().b_MakeRotation=true;
 
             collision.gameObject.SetActive(false);
         }
@@ -91,6 +106,7 @@ public class SwitchWeapon : MonoBehaviour
 
        
     }
- }
+   
+}
 
 
