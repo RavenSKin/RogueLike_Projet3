@@ -1,6 +1,4 @@
-## RogueLike_Projet3
-
-Bone Pit 
+## RogueLike_Projet3 - BONE PIT
 
 # 1/Descriptions  
 
