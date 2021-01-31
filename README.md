@@ -1,8 +1,8 @@
-# RogueLike_Projet3
+## RogueLike_Projet3
 
 Bone Pit 
 
-1/Descriptions  
+#1/Descriptions  
 
 Controller : Clavier / souris 
 
@@ -13,18 +13,18 @@ Genre : fantaisies - fantastique
 Type: Rogue Like 
 
  
-2/ Introduction 
+#2/ Introduction 
 Bonepit est un RogueLike dans un univers médival-fantastique, en vue top-down. C'est un jeu dynamique dans lequel vous combattrez pour progresser dans les niveaux.
  
 
-3/Univers 
+#3/Univers 
 
  Reprenant l'ambiance d'un donjon du moyen-âge en y ajoutant de la magie. Dans ce jeu, vous incarnez un petit squelette qui a été une cible de résurrection de masse.
 Donc vous vous réveillez en tant qu’ancien combattant protecteur des catacombes.
 En colère pour n'avoir pu connaitre le sommeil éternel, vous allez chercher à travers le donjon afin de retrouver celui qui a troublé votre mort. 
 
 
-4/Gameplay 
+#4/Gameplay 
 
 Camera : Top Down Générations aléatoire du donjon. 
 
@@ -37,7 +37,7 @@ Lorsque le joueur subit des dégâts, il devient invulnérable pendant une demi 
 Des ennemis appaitrons dans les salles de la carte.
 
 
-5/Références  
+#5/Références  
 
 Pour le système d’objets, nous nous sommes inspirés de plusieurs rogue Like tel que “ Pixel Dungeon “ + “ Binding Of Isaac “. 
 
