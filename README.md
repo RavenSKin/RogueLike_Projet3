@@ -42,3 +42,12 @@ Pour le système d’objets, nous nous sommes inspirés de plusieurs rogue Like 
  Pour la Direction Artistique, nous nous sommes inspire de “ Gonnler “ pour la création des personnages. 
 
  Pour le Gameplay nous avons pris connaissance de “DEAD CELLS “ & “CRYPT OF THE NECRODANCER” 
+ 
+ #6/Code
+ 
+ Pour la generation procedural de salles , j'utilise principalement les raycast qui sont donc chargé de reperer si il y a un mur ou non et de construire en consequence 
+ un cul de sac ou une nouvelle salle . Mon code se decompose donc en 2 parties : une chargé de tirer un rayon et une autre chargé de construire (la partie chargé de tirer un rayon etant en parent de celle chargé de construire )
+ 
+ Les ennemies ont quant a eux une IA extremement simple chargée de se deplacer vers le joueur et d'attaquer quand elle est a portée , puis apres avoir attaquer , l'ennemi reste en cooldown pour se reposer 
+ 
+ Pour le choix des salles speciales , je procede d'abord a une generation complete des salles vides , puis ensuite je choisit aleatoirement quelle salle sera special (en excluant la boss room et la start room )
