@@ -1,6 +1,6 @@
 # RogueLike_Projet3
 
-Bone’s Pit 
+Bone Pit 
 
 1/Descriptions  
 
@@ -13,29 +13,29 @@ Genre : fantaisies - fantastique
 Type: Rogue Like 
 
  
-
 2/ Introduction 
-
- On incarne un petit squelette qui a été une cible de résurrection de masse. Donc vous vous réveillez en temps qu’anciens combattant,
- protecteur du donjon des catacombes. Ne comprenant pas la raison de votre existence, vous allez prendre le contrôle du donjon par la force en combattant son commandant. 
+ Bonepit est un RogueLike dans un univers médival-fantastique, en vue top-down. C'est un jeu dynamique dans lequel vous combattrez pour progresser dans les niveaux.
  
 
 3/Univers 
 
- L’univers est fantastique car il existe des squelettes vivants. Lors de votre aventure, 
-vous allez devoir vous battre contres des chevaliers qui feront tout pour défendre leurs donjons. 
+ Reprenant l'ambiance d'un donjon du moyen-âge en y ajoutant de la magie. Dans ce jeu, vous incarnez un petit squelette qui a été une cible de résurrection de masse.
+Donc vous vous réveillez en tant qu’ancien combattant protecteur des catacombes.
+En colère pour n'avoir pu connaitre le sommeil éternel, vous allez chercher à travers le donjon afin de retrouver celui qui a troublé votre mort. 
 
 
-4/Gameplay Camera : Top Down Générations aléatoire du donjon. 
+4/Gameplay 
 
- Personnage : Déplacement -> Haut, Bas, Gauche,Droite. 
+Camera : Top Down Générations aléatoire du donjon. 
 
-Lorsque le joueur commence son aventure, il commence avec une arme aléatoire. 
+Déplacement : Haut, Bas, Gauche, Droite. 
 
- Lorsque le joueur subi des dégâts, il devient invulnérable pendant X secondes. 
+Lorsque le joueur commence son aventure avec une arme aléatoire. 
 
- Des méchants personnages voudront vous tuer. (IA -> Attaquer, suivre …) 
- 
+Lorsque le joueur subit des dégâts, il devient invulnérable pendant une demi seconde. 
+
+Des ennemis appaitrons dans les salles de la carte.
+
 
 5/Références  
 
