@@ -43,7 +43,7 @@ Pour le système d’objets, nous nous sommes inspirés de plusieurs rogue Like 
 
  Pour le Gameplay nous avons pris connaissance de “DEAD CELLS “ & “CRYPT OF THE NECRODANCER” 
  
- #6/Code
+# 6/Code  
  
  Pour la generation procedural de salles , j'utilise principalement les raycast qui sont donc chargé de reperer si il y a un mur ou non et de construire en consequence 
  un cul de sac ou une nouvelle salle . Mon code se decompose donc en 2 parties : une chargé de tirer un rayon et une autre chargé de construire (la partie chargé de tirer un rayon etant en parent de celle chargé de construire )
