@@ -14,7 +14,7 @@ Type: Rogue Like
 
  
 2/ Introduction 
- Bonepit est un RogueLike dans un univers médival-fantastique, en vue top-down. C'est un jeu dynamique dans lequel vous combattrez pour progresser dans les niveaux.
+Bonepit est un RogueLike dans un univers médival-fantastique, en vue top-down. C'est un jeu dynamique dans lequel vous combattrez pour progresser dans les niveaux.
  
 
 3/Univers 
