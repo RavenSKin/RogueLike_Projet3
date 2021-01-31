@@ -50,4 +50,4 @@ Pour le système d’objets, nous nous sommes inspirés de plusieurs rogue Like 
  
  Les ennemies ont quant a eux une IA extremement simple chargée de se deplacer vers le joueur et d'attaquer quand elle est a portée , puis apres avoir attaquer , l'ennemi reste en cooldown pour se reposer 
  
- Pour le choix des salles speciales , je procede d'abord a une generation complete des salles vides , puis ensuite je choisit aleatoirement quelle salle sera special (en excluant la boss room et la start room )
+ Pour le choix des salles speciales , je procede d'abord a une generation complete des salles vides , puis ensuite je choisi aleatoirement quelles salles seront speciales (en excluant la boss room et la start room )
