@@ -51,3 +51,12 @@ Pour le système d’objets, nous nous sommes inspirés de plusieurs rogue Like 
  Les ennemies ont quant a eux une IA extremement simple chargée de se deplacer vers le joueur et d'attaquer quand elle est a portée , puis apres avoir attaquer , l'ennemi reste en cooldown pour se reposer 
  
  Pour le choix des salles speciales , je procede d'abord a une generation complete des salles vides , puis ensuite je choisi aleatoirement quelles salles seront speciales (en excluant la boss room et la start room )
+# 7/Probleme 
+Certains fichiers se sont perdu en faisant un commit sur la mauvaise branche , et en essayant de revenir a un commit anterieur certains sont revenu et d'autres ont été supprimés 
+La video presente dans ce lien est la version la plus recente du projet : https://youtu.be/-3q144mEKPg
+
+# 8/Ajouts utiles
+
+Un Boss est prevu normalement , un script permettant de faire spawn la salle du boss pourrait etre interessant
+Un Mouvement fluide de camera etait prevu(la camera etait supposé etre locké sur la salle
+
